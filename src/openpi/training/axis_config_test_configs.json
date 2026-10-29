@@ -1,0 +1,215 @@
+{
+ "configs": {
+  "finetune_bound": {
+   "assets_base_dir": "/r/runs/pi05.finetune.pi05_axis_heldout_qual_v2_bc__qual_v2_bc/assets",
+   "batch_size": 32,
+   "checkpoint_base_dir": "/r/runs",
+   "data": {
+    "asset_id": "Devon018/Franka-Datasets-v2",
+    "bundle": "/r/cache/bundles/abababababababababababababababababababababababababababababababab",
+    "bundle_id": "sha256:abababababababababababababababababababababababababababababababab",
+    "corpus_base": "/r/corpus/qvla-v1-bench",
+    "default_prompt": null,
+    "image_center_crop": true,
+    "norm_stats_dir": "/r/corpus/qvla-v1-bench/norm_stats/heldout24_qual_v2",
+    "prompt_from_task": true,
+    "ranges_path": "/r/corpus/qvla-v1-bench/ft_demos/splits/qual_v2.ranges.json",
+    "repo_id": "Devon018/Franka-Datasets-v2",
+    "roots_index": "/r/corpus/qvla-v1-bench/ft_demos/splits/qual_v2.roots.json",
+    "smoke": false
+   },
+   "ema_decay": null,
+   "exp_name": "train",
+   "freeze": "lora",
+   "fsdp_devices": 8,
+   "identity": {
+    "arm": "pi05.finetune.pi05_axis_heldout_qual_v2_bc__qual_v2_bc",
+    "armspec_sha256": "1132686d9a5e717b17dde82bd017321d3a27add8582f5f674fc8482c33410bf5",
+    "bundle": "sha256:abababababababababababababababababababababababababababababababab",
+    "init": "axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_pretrain_d8_paper_5k__libero5k_d8_bc/20604#sha256:1b395465e1a329f294c5da299120ebf15ba0ced605330519a4fe61a741966d73",
+    "norm": "heldout24_qual_v2#sha256:b1808cdd0c7000f30b93eff8246e814e5e90e1a8dbb33a83be47936500fa6454",
+    "preset": "pi05.finetune.lora.paper",
+    "rowspace": "heldout24_ft#sha256:813de4957527d3394cadc9e564f9718769c82415c9091f4971ba5e47641960f9"
+   },
+   "keep_period": 2716,
+   "log_interval": 100,
+   "lr_schedule": {
+    "decay_lr": 2.5e-05,
+    "decay_steps": 13580,
+    "peak_lr": 2.5e-05,
+    "warmup_steps": 500
+   },
+   "model": {
+    "action_dim": 32,
+    "action_expert_variant": "gemma_300m_lora",
+    "action_horizon": 10,
+    "discrete_state_input": true,
+    "dtype": "bfloat16",
+    "max_token_len": 200,
+    "paligemma_variant": "gemma_2b_lora",
+    "pi05": true,
+    "pytorch_compile_mode": "max-autotune"
+   },
+   "name": "pi05.finetune.pi05_axis_heldout_qual_v2_bc__qual_v2_bc",
+   "num_train_steps": 13580,
+   "num_workers": 8,
+   "optimizer": {
+    "b1": 0.9,
+    "b2": 0.95,
+    "clip_gradient_norm": 1.0,
+    "eps": 1e-08,
+    "weight_decay": 1e-10
+   },
+   "overwrite": false,
+   "resume": false,
+   "save_interval": 2716,
+   "schema": "qvla.openpi_train_config/1",
+   "seed": 42,
+   "wandb_enabled": false,
+   "weight_loader": {
+    "params_path": "/r/cache/checkpoints/qvla-v1-pi05/pretrain/pi05_axis_pretrain_d8_paper_5k__libero5k_d8_bc/20604/params"
+   }
+  },
+  "finetune_serve": {
+   "assets_base_dir": "/r/runs/pi05.finetune.pi05_axis_heldout_qual_v2_bc__qual_v2_bc/assets",
+   "batch_size": 32,
+   "checkpoint_base_dir": "/r/runs",
+   "data": {
+    "asset_id": "Devon018/Franka-Datasets-v2",
+    "bundle": null,
+    "bundle_id": null,
+    "corpus_base": "/r/corpus/qvla-v1-bench",
+    "default_prompt": null,
+    "image_center_crop": true,
+    "norm_stats_dir": "/r/corpus/qvla-v1-bench/norm_stats/heldout24_qual_v2",
+    "prompt_from_task": true,
+    "ranges_path": "/r/corpus/qvla-v1-bench/ft_demos/splits/qual_v2.ranges.json",
+    "repo_id": "Devon018/Franka-Datasets-v2",
+    "roots_index": "/r/corpus/qvla-v1-bench/ft_demos/splits/qual_v2.roots.json",
+    "smoke": false
+   },
+   "ema_decay": null,
+   "exp_name": "serve",
+   "freeze": "lora",
+   "fsdp_devices": 8,
+   "identity": {
+    "arm": "pi05.finetune.pi05_axis_heldout_qual_v2_bc__qual_v2_bc",
+    "armspec_sha256": "1132686d9a5e717b17dde82bd017321d3a27add8582f5f674fc8482c33410bf5",
+    "bundle": null,
+    "init": "axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_pretrain_d8_paper_5k__libero5k_d8_bc/20604#sha256:1b395465e1a329f294c5da299120ebf15ba0ced605330519a4fe61a741966d73",
+    "norm": "heldout24_qual_v2#sha256:b1808cdd0c7000f30b93eff8246e814e5e90e1a8dbb33a83be47936500fa6454",
+    "preset": "pi05.finetune.lora.paper",
+    "rowspace": "heldout24_ft#sha256:813de4957527d3394cadc9e564f9718769c82415c9091f4971ba5e47641960f9"
+   },
+   "keep_period": 2716,
+   "log_interval": 100,
+   "lr_schedule": {
+    "decay_lr": 2.5e-05,
+    "decay_steps": 13580,
+    "peak_lr": 2.5e-05,
+    "warmup_steps": 500
+   },
+   "model": {
+    "action_dim": 32,
+    "action_expert_variant": "gemma_300m_lora",
+    "action_horizon": 10,
+    "discrete_state_input": true,
+    "dtype": "bfloat16",
+    "max_token_len": 200,
+    "paligemma_variant": "gemma_2b_lora",
+    "pi05": true,
+    "pytorch_compile_mode": "max-autotune"
+   },
+   "name": "pi05.finetune.pi05_axis_heldout_qual_v2_bc__qual_v2_bc",
+   "num_train_steps": 13580,
+   "num_workers": 8,
+   "optimizer": {
+    "b1": 0.9,
+    "b2": 0.95,
+    "clip_gradient_norm": 1.0,
+    "eps": 1e-08,
+    "weight_decay": 1e-10
+   },
+   "overwrite": false,
+   "resume": false,
+   "save_interval": 2716,
+   "schema": "qvla.openpi_train_config/1",
+   "seed": 42,
+   "wandb_enabled": false,
+   "weight_loader": {
+    "params_path": "/r/cache/checkpoints/qvla-v1-pi05/pretrain/pi05_axis_pretrain_d8_paper_5k__libero5k_d8_bc/20604/params"
+   }
+  },
+  "pretrain_no_bind": {
+   "assets_base_dir": "/r/runs/pi05.pretrain.pi05_axis_awr_d8__libero5k_d8_awr_phase_ep/assets",
+   "batch_size": 64,
+   "checkpoint_base_dir": "/r/runs",
+   "data": {
+    "asset_id": "Devon018/Franka-Datasets-v2",
+    "bundle": "/r/corpus/qvla-v1-corpus/bundles/66832a7cef00618b7aa7a53ef66b69a05f330c117802fd4a217b87a3f215fd06",
+    "bundle_id": "sha256:66832a7cef00618b7aa7a53ef66b69a05f330c117802fd4a217b87a3f215fd06",
+    "corpus_base": "/r/corpus/qvla-v1-corpus/episodes",
+    "default_prompt": null,
+    "image_center_crop": true,
+    "norm_stats_dir": "/r/corpus/qvla-v1-corpus/norm_stats/libero5k_v2_d8",
+    "prompt_from_task": true,
+    "ranges_path": "/r/corpus/qvla-v1-corpus/index/ranges_libero_5k_v2.json",
+    "repo_id": "Devon018/Franka-Datasets-v2",
+    "roots_index": "/r/corpus/qvla-v1-corpus/index/roots_libero_5k_v2_d8.json",
+    "smoke": false
+   },
+   "ema_decay": 0.999,
+   "exp_name": "train",
+   "freeze": "none",
+   "fsdp_devices": 8,
+   "identity": {
+    "arm": "pi05.pretrain.pi05_axis_awr_d8__libero5k_d8_awr_phase_ep",
+    "armspec_sha256": "5c6f8a033658d1c97da7e9f6d7e1e474670f48464795a107717f9c5c422d8d7a",
+    "bundle": "sha256:66832a7cef00618b7aa7a53ef66b69a05f330c117802fd4a217b87a3f215fd06",
+    "init": "base:pi05_droid",
+    "norm": "libero5k_v2_d8#sha256:2fad5134b75426dea10eded094b192a455eb9e557a43d19033dd10c374aebfa6",
+    "preset": "pi05.pretrain.full.paper",
+    "rowspace": "libero5k_v2_d8#sha256:2da88145ce3a175dda17cd99bcec9685acfb9fa611e20a284688fe75b76810c9"
+   },
+   "keep_period": 6000,
+   "log_interval": 100,
+   "lr_schedule": {
+    "decay_lr": 5e-05,
+    "decay_steps": 1000000,
+    "peak_lr": 5e-05,
+    "warmup_steps": 2060
+   },
+   "model": {
+    "action_dim": 32,
+    "action_expert_variant": "gemma_300m",
+    "action_horizon": 10,
+    "discrete_state_input": true,
+    "dtype": "bfloat16",
+    "max_token_len": 200,
+    "paligemma_variant": "gemma_2b",
+    "pi05": true,
+    "pytorch_compile_mode": "max-autotune"
+   },
+   "name": "pi05.pretrain.pi05_axis_awr_d8__libero5k_d8_awr_phase_ep",
+   "num_train_steps": 20605,
+   "num_workers": 8,
+   "optimizer": {
+    "b1": 0.9,
+    "b2": 0.95,
+    "clip_gradient_norm": 1.0,
+    "eps": 1e-08,
+    "weight_decay": 1e-10
+   },
+   "overwrite": false,
+   "resume": false,
+   "save_interval": 2000,
+   "schema": "qvla.openpi_train_config/1",
+   "seed": 42,
+   "wandb_enabled": false,
+   "weight_loader": {
+    "params_path": "/r/cache/checkpoints/qvla-v1-base-weights/openpi/openpi-assets/checkpoints/pi05_droid/params"
+   }
+  }
+ },
+ "schema": "qvla.openpi_train_config/1"
+}

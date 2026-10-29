@@ -1,0 +1,291 @@
+{
+ "arrays": {
+  "cond": {
+   "dtype": "|u1",
+   "sha256": "f6cfd73143a61da3ef2fb42f557fc8c00c8042c4d312bb7411dd2e3d94129cca",
+   "shape": [
+    4,
+    2,
+    1
+   ]
+  },
+  "legacy.rows": {
+   "dtype": "<i8",
+   "sha256": "f00a02f6894c6b1b7ab389627cbdf6b2eac169eed284d0400114ba9f456e91cd",
+   "shape": [
+    9
+   ]
+  },
+  "plan": {
+   "dtype": "<i8",
+   "sha256": "3b91170538e62065e2a015cbf57798f8bab48f8d4400a1affee6ee72c9f92929",
+   "shape": [
+    4,
+    2
+   ]
+  },
+  "rowspace.episode_attempt": {
+   "dtype": "<i8",
+   "sha256": "952385dbc71436cc3ce3a960e936bfcceb567b658bbb4a23fcac1891e99a6c00",
+   "shape": [
+    4
+   ]
+  },
+  "rowspace.episode_from": {
+   "dtype": "<i8",
+   "sha256": "cb1272ef88fb00ca944be96985bb2dda183b532a3a36b7744b3999836bbb3049",
+   "shape": [
+    4
+   ]
+  },
+  "rowspace.episode_index": {
+   "dtype": "<i8",
+   "sha256": "374ed58bec042b375f41d2b57b19e0610368256cd7b83acabcf72f567ac9cc93",
+   "shape": [
+    4
+   ]
+  },
+  "rowspace.episode_length": {
+   "dtype": "<i8",
+   "sha256": "521a4dc40f4cdb5f401d5eac6a04cb99261610622b6f38e89b27fadd80e8dfa9",
+   "shape": [
+    4
+   ]
+  },
+  "rowspace.episode_task": {
+   "dtype": "<i8",
+   "sha256": "ddc70a9892e825f75fd0808baff607e2c5415bef989f9da7f0b1044e8faf634f",
+   "shape": [
+    4
+   ]
+  },
+  "rowspace.ranges_counts": {
+   "dtype": "<i8",
+   "sha256": "c10892f6a9769793b1c661c0a19045b99e697e5f40240eed49dbe9eaae5a14d6",
+   "shape": [
+    3
+   ]
+  },
+  "rowspace.ranges_entry": {
+   "dtype": "<i8",
+   "sha256": "1e8ca591a25080fa691101d5507949af37e1781a4685036c70b1279989100a08",
+   "shape": [
+    3
+   ]
+  },
+  "rowspace.ranges_spans": {
+   "dtype": "<i8",
+   "sha256": "36dabf4a4bedcc50c124abe055dcb3b8c03dcc7ee2cb5d044979f964c5a7b5d1",
+   "shape": [
+    4,
+    2
+   ]
+  },
+  "weights": {
+   "dtype": "<f4",
+   "sha256": "9db8992985f628b528c98f4dd21cd58870872424a2b03daf47268f454535bfb3",
+   "shape": [
+    23
+   ]
+  }
+ },
+ "budget": {
+  "global_batch": 2,
+  "steps": 4
+ },
+ "controls": [],
+ "diagnostics": {
+  "epochs": 0.8888888888888888
+ },
+ "inputs": {},
+ "legacy": [
+  {
+   "codec": "npz",
+   "doc": {
+    "$o": [
+     [
+      "rows",
+      {
+       "$array": "legacy.rows"
+      }
+     ]
+    ]
+   },
+   "format": "lerobot-legacy",
+   "lock_id": null,
+   "path": "signals/toy/lerobot_rows.npz"
+  }
+ ],
+ "program": {
+  "method": "toy",
+  "params": {
+   "cond": true,
+   "weights": true
+  },
+  "version": 1
+ },
+ "program_sha": "a6d98e4a57c1c6c56ff32130393821552cf595803dba6a051884c9881f472702",
+ "reducer": "global_ratio",
+ "requires": [
+  "cond_prompt",
+  "loss_weights",
+  "plan"
+ ],
+ "rowspace": {
+  "arrays": {
+   "episode_attempt": {
+    "dtype": "<i8",
+    "sha256": "952385dbc71436cc3ce3a960e936bfcceb567b658bbb4a23fcac1891e99a6c00",
+    "shape": [
+     4
+    ]
+   },
+   "episode_from": {
+    "dtype": "<i8",
+    "sha256": "cb1272ef88fb00ca944be96985bb2dda183b532a3a36b7744b3999836bbb3049",
+    "shape": [
+     4
+    ]
+   },
+   "episode_index": {
+    "dtype": "<i8",
+    "sha256": "374ed58bec042b375f41d2b57b19e0610368256cd7b83acabcf72f567ac9cc93",
+    "shape": [
+     4
+    ]
+   },
+   "episode_length": {
+    "dtype": "<i8",
+    "sha256": "521a4dc40f4cdb5f401d5eac6a04cb99261610622b6f38e89b27fadd80e8dfa9",
+    "shape": [
+     4
+    ]
+   },
+   "episode_task": {
+    "dtype": "<i8",
+    "sha256": "ddc70a9892e825f75fd0808baff607e2c5415bef989f9da7f0b1044e8faf634f",
+    "shape": [
+     4
+    ]
+   },
+   "ranges_counts": {
+    "dtype": "<i8",
+    "sha256": "c10892f6a9769793b1c661c0a19045b99e697e5f40240eed49dbe9eaae5a14d6",
+    "shape": [
+     3
+    ]
+   },
+   "ranges_entry": {
+    "dtype": "<i8",
+    "sha256": "1e8ca591a25080fa691101d5507949af37e1781a4685036c70b1279989100a08",
+    "shape": [
+     3
+    ]
+   },
+   "ranges_spans": {
+    "dtype": "<i8",
+    "sha256": "36dabf4a4bedcc50c124abe055dcb3b8c03dcc7ee2cb5d044979f964c5a7b5d1",
+    "shape": [
+     4,
+     2
+    ]
+   }
+  },
+  "corpus_fingerprint": "sha256:3e6e18c8ee3f16a77b8e5e51a1756b3a",
+  "heldout_excluded": [],
+  "id": "93a136c4f3a34ef2459a4e43481f0ca00d2a5d8fd13521a6ecbb5d39efa48343",
+  "idle_filter": {
+   "function": "toy"
+  },
+  "kind": "corpus",
+  "n_rows": 23,
+  "n_trainable": 9,
+  "name": "toy",
+  "prompts": [
+   "open the drawer",
+   "pick up the bowl"
+  ],
+  "ranges_codec": "json",
+  "ranges_path": "index/ranges_toy.json",
+  "roots": {
+   "$o": [
+    [
+     "version",
+     2
+    ],
+    [
+     "base",
+     "../corpus"
+    ],
+    [
+     "roots",
+     {
+      "$o": [
+       [
+        "1000",
+        "task_1000"
+       ],
+       [
+        "800",
+        "task_800"
+       ]
+      ]
+     }
+    ]
+   ]
+  },
+  "roots_codec": "json-indent2-nl",
+  "roots_path": "index/roots_toy.json",
+  "schema": "qvla.rowspace/1",
+  "source": "axis.signals.testing"
+ },
+ "schema": "qvla.signal_bundle/1",
+ "seed": 0,
+ "serve": [
+  {
+   "beta": 1.0,
+   "fields": {},
+   "uncond_fields": null
+  },
+  {
+   "beta": 1.0,
+   "fields": {
+    "quality": "5"
+   },
+   "uncond_fields": null
+  }
+ ],
+ "vocab": {
+  "fields": [
+   "quality"
+  ],
+  "prompts": [
+   "open the drawer",
+   "pick up the bowl"
+  ],
+  "text": {
+   "quality": [
+    [
+     1,
+     "\nQuality: 1"
+    ],
+    [
+     2,
+     "\nQuality: 2"
+    ],
+    [
+     3,
+     "\nQuality: 3"
+    ],
+    [
+     4,
+     "\nQuality: 4"
+    ],
+    [
+     5,
+     "\nQuality: 5"
+    ]
+   ]
+  }
+ }
+}
